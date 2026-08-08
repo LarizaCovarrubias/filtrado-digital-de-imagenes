@@ -1,8 +1,8 @@
-# Filtrado digital de imágenes con Python
+# Filtrado digital de imágenes
 
 Repositorio educativo en español para aprender **procesamiento y filtrado digital de imágenes** desde un nivel introductorio.
 
-El recorrido combina explicaciones intuitivas, implementaciones paso a paso y comparaciones con herramientas de uso común como **NumPy** y **OpenCV**. La intención no es únicamente aprender a llamar funciones, sino comprender qué ocurre con los píxeles, cómo funciona cada técnica y en qué situaciones puede ser útil.
+El recorrido combina explicaciones intuitivas, implementaciones paso a paso y comparaciones con herramientas de uso común como **NumPy** y **OpenCV**. La intención no es únicamente aprender a utilizar funciones, sino comprender qué ocurre con los píxeles, cómo funciona cada técnica y en qué situaciones puede ser útil.
 
 ![Fotografía principal del repositorio](images/samples/imagen_principal.jpg)
 
@@ -23,20 +23,22 @@ Los conceptos específicos de imágenes, matrices, histogramas, filtros y segmen
 
 ## Objetivo
 
-Al terminar el recorrido podrás:
+Desarrollar una comprensión introductoria del procesamiento digital de imágenes mediante Python, combinando fundamentos conceptuales, implementaciones paso a paso y herramientas como NumPy y OpenCV.
 
-- comprender cómo una imagen digital se representa como una matriz;
-- interpretar conceptos como píxel, intensidad, `shape`, `dtype` y canales de color;
-- seleccionar y reorganizar regiones mediante índices y *slicing*;
+### Al finalizar el recorrido podrás
+
+- comprender cómo una imagen digital se representa y almacena como una matriz;
+- interpretar conceptos fundamentales como píxel, intensidad, `shape`, `dtype` y canales de color;
+- manipular regiones de una imagen mediante índices, recortes y *slicing*;
 - analizar la distribución de intensidades mediante histogramas;
-- aplicar transformaciones de intensidad;
-- mejorar el contraste global y local mediante ecualización y CLAHE;
-- comprender el funcionamiento de la convolución, el *padding* y los kernels;
-- comparar filtros de suavizado frente a distintos tipos de ruido;
-- detectar bordes con Sobel, Laplaciano y Canny;
+- aplicar transformaciones de intensidad y comprender su efecto sobre la imagen;
+- mejorar el contraste mediante ecualización de histograma y CLAHE;
+- comprender el funcionamiento de la convolución, los kernels y el tratamiento de bordes mediante *padding*;
+- reconocer distintos tipos de ruido y comparar filtros de suavizado para reducirlos;
+- identificar cambios de intensidad y detectar bordes mediante Sobel, Laplaciano y Canny;
 - segmentar imágenes mediante técnicas de umbralización;
-- aplicar operaciones morfológicas sobre imágenes binarias;
-- elegir técnicas básicas de procesamiento según el problema y analizar sus resultados.
+- procesar y limpiar imágenes binarias mediante operaciones morfológicas;
+- seleccionar técnicas básicas de procesamiento de imágenes de acuerdo con el problema y analizar sus resultados.
 
 ## Ruta de aprendizaje
 
@@ -54,18 +56,15 @@ Se recomienda seguir los módulos en orden, ya que algunos conceptos se reutiliz
 | 08 | Umbralización | [`08_umbralizacion.ipynb`](notebooks/08_umbralizacion.ipynb) |
 | 09 | Operaciones morfológicas | [`09_operaciones_morfologicas.ipynb`](notebooks/09_operaciones_morfologicas.ipynb) |
 
-## Metodología de aprendizaje
+## ¿Cómo utilizar este repositorio?
 
-Los módulos siguen, cuando el tema lo permite, una secuencia común:
+El recorrido está pensado para combinar aprendizaje guiado, práctica e interpretación.
 
-1. **Comprender el concepto.** Se introduce qué problema resuelve la técnica y qué significan los términos necesarios.
-2. **Observar un ejemplo.** Se trabaja con matrices pequeñas, imágenes sintéticas o una fotografía real.
-3. **Implementar paso a paso.** Algunas operaciones se construyen manualmente para comprender el algoritmo.
-4. **Visualizar el resultado.** Se comparan imágenes, histogramas u otras representaciones.
-5. **Usar herramientas existentes.** Se muestran alternativas con NumPy u OpenCV cuando corresponde.
-6. **Interpretar.** Se analiza qué cambió, por qué ocurrió y cuándo podría utilizarse la técnica.
+### 1. Estudia el notebook
 
-En términos generales:
+Los notebooks contienen las explicaciones, ejemplos y experimentos de cada módulo.
+
+Cuando el tema lo permite, se sigue esta secuencia:
 
 ```text
 comprender → implementar → visualizar → comparar → interpretar
@@ -73,11 +72,31 @@ comprender → implementar → visualizar → comparar → interpretar
 
 Las implementaciones manuales priorizan la **claridad educativa** sobre la velocidad de ejecución.
 
-## Inicio rápido
+### 2. Realiza el ejercicio
 
-### Opción 1 — Crear el entorno Conda recomendado
+Cada módulo cuenta con una actividad práctica independiente dentro de `exercises/`.
 
-Desde la carpeta raíz del proyecto:
+Los ejercicios pueden centrarse en **implementación**, **aplicación y análisis**, o en una combinación de estos enfoques.
+
+En general, buscan desarrollar tres habilidades:
+
+```text
+programar → visualizar → interpretar
+```
+
+### 3. Consulta la solución
+
+Después de intentar el ejercicio, puedes revisar `solucion.ipynb`.
+
+Las soluciones están en formato notebook para incluir código, imágenes, histogramas, comparaciones y explicaciones. Cada solución es independiente y puede ejecutarse con `Run All` una vez instalado el proyecto.
+
+## Instalación y ejecución
+
+El proyecto puede utilizarse en **JupyterLab**, **VS Code** o **Google Colab**.
+
+### JupyterLab con Conda
+
+Si todavía no tienes un entorno para el proyecto, desde la carpeta raíz ejecuta:
 
 ```bash
 conda env create -f environment.yml
@@ -86,21 +105,13 @@ pip install -e .
 jupyter lab
 ```
 
-`environment.yml` crea el entorno de trabajo con Python, JupyterLab y las herramientas necesarias para ejecutar y validar el proyecto.
-
-`pip install -e .` instala el paquete `filtrado_digital` en modo editable y agrega las dependencias Python definidas en `pyproject.toml`.
-
 Una vez abierto JupyterLab, entra a `notebooks/` y comienza con:
 
 ```text
 01_imagenes_como_matrices.ipynb
 ```
 
-Ejecuta las celdas en orden y modifica los ejemplos cuando quieras experimentar.
-
-### Opción 2 — Utilizar un entorno Conda existente
-
-Si ya tienes un entorno Conda:
+Si ya tienes un entorno Conda creado, puedes utilizarlo:
 
 ```bash
 conda activate NOMBRE_DE_TU_ENTORNO
@@ -109,28 +120,49 @@ pip install -e .
 jupyter lab
 ```
 
-### ¿Qué hace `pip install -e .`?
+### VS Code con Conda
 
-La opción `-e` significa **editable**.
+Activa o crea el entorno Conda e instala el proyecto:
 
-Permite que los notebooks utilicen las funciones ubicadas en `src/filtrado_digital/` mediante imports normales:
-
-```python
-from filtrado_digital.filtros import filtro_gaussiano_manual
+```bash
+conda activate filtrado-digital
+pip install -e .
 ```
 
-Si modificas el código de `src/`, los cambios quedan disponibles para el proyecto sin tener que reinstalarlo después de cada modificación.
+Después abre la carpeta completa del repositorio en VS Code:
 
-## Cómo está organizado el proyecto
+```bash
+code .
+```
+
+Para trabajar con los notebooks `.ipynb` se recomienda tener instaladas las extensiones **Python** y **Jupyter**.
+
+Selecciona como kernel el mismo entorno Conda donde instalaste el proyecto.
+
+### Google Colab
+
+En Google Colab no necesitas crear un entorno Conda local.
+
+Puedes clonar el repositorio e instalarlo directamente en la sesión:
+
+```python
+!git clone https://github.com/LarizaCovarrubias/filtrado-digital-imagenes.git
+%cd filtrado-digital-imagenes
+!pip install -e .
+```
+
+Después de la instalación, los mismos imports utilizados en JupyterLab y VS Code estarán disponibles en Colab.
+
+## Estructura del repositorio
 
 ```text
-filtrado-digital-imagenes-python/
+filtrado-digital-imagenes/
 ├── notebooks/             # Lecciones principales
-├── exercises/             # Ejercicios y soluciones explicadas
+├── exercises/             # Ejercicios y soluciones
 ├── src/
-│   └── filtrado_digital/  # Código reutilizable usado por los notebooks
+│   └── filtrado_digital/  # Código reutilizable utilizadas por los notebooks
 ├── images/                # Imágenes de ejemplo y licencias
-├── tests/                 # Pruebas automáticas
+├── tests/                 # Pruebas automáticas, forma parte de la validación y mantenimiento del proyecto
 ├── environment.yml        # Entorno recomendado para Conda
 ├── pyproject.toml         # Configuración y dependencias del proyecto
 ├── .gitignore
@@ -138,129 +170,13 @@ filtrado-digital-imagenes-python/
 └── README.md
 ```
 
-Para estudiar el contenido, principalmente utilizarás:
+## Imágenes
 
-```text
-notebooks/   → aprender
-exercises/   → practicar
-images/      → recursos utilizados en los ejemplos
-```
+El repositorio incluye una fotografía real y algunas imágenes sintéticas utilizadas en los ejemplos.
 
-Las carpetas `src/` y `tests/` forman parte de la organización interna y del mantenimiento del proyecto.
+La procedencia y las condiciones de uso de estos recursos están documentadas en [`images/README.md`](images/README.md).
 
-## Notebooks y `src/`
-
-Los notebooks contienen las explicaciones, ejemplos y experimentos.
-
-La carpeta `src/filtrado_digital/` contiene funciones reutilizables que pueden utilizarse desde diferentes notebooks. Por ejemplo:
-
-```python
-from filtrado_digital.filtros import filtro_gaussiano_manual
-```
-
-importa una función definida en:
-
-```text
-src/filtrado_digital/filtros.py
-```
-
-Normalmente no necesitas ejecutar los archivos de `src/` directamente: los notebooks los utilizan mediante `import`.
-
-## Ejercicios adicionales
-
-Cada módulo cuenta con una actividad práctica independiente. Se recomienda intentar resolverla **después de completar el notebook correspondiente y antes de abrir la solución**.
-
-```text
-exercises/
-├── 01_imagenes_como_matrices/
-│   ├── ejercicio.md
-│   └── solucion.ipynb
-├── 02_operaciones_basicas/
-│   ├── ejercicio.md
-│   └── solucion.ipynb
-└── ...
-```
-
-Cada ejercicio puede centrarse en **implementación**, **aplicación y análisis**, o una combinación de ambos.
-
-En general, las actividades buscan desarrollar tres habilidades:
-
-```text
-programar → visualizar → interpretar
-```
-
-Las soluciones están en formato `.ipynb` para poder incluir código, imágenes, histogramas, comparaciones y explicaciones.
-
-Cada solución es independiente y puede ejecutarse con `Run All` una vez que el proyecto está instalado con `pip install -e .`.
-
-## Imágenes de ejemplo
-
-La fotografía principal utilizada en varios módulos se encuentra en:
-
-```text
-images/samples/imagen_principal.jpg
-```
-
-Su procedencia y licencia están documentadas en [`images/README.md`](images/README.md).
-
-También se utilizan imágenes sintéticas cuando permiten controlar mejor el ejemplo, por ejemplo para explicar matrices, ruido, kernels y operaciones morfológicas.
-
-## Utilizar imágenes propias
-
-Puedes crear:
-
-```text
-images/personal/
-```
-
-y colocar ahí tus propias fotografías para experimentar con los métodos del repositorio.
-
-Esta carpeta está ignorada por Git para evitar que las imágenes personales se publiquen accidentalmente.
-
-## Pruebas automáticas
-
-La carpeta `tests/` contiene pruebas para comprobar que las principales funciones de `src/` continúan funcionando correctamente después de realizar modificaciones.
-
-Desde la raíz del proyecto:
-
-```bash
-pytest
-```
-
-Las pruebas no son necesarias para estudiar las lecciones, pero ayudan a mantener la calidad del código.
-
-## Uso en VS Code
-
-Los notebooks `.ipynb` pueden abrirse directamente en VS Code utilizando las extensiones **Python** y **Jupyter**.
-
-Selecciona el mismo entorno Conda donde instalaste el proyecto con:
-
-```bash
-pip install -e .
-```
-
-Los imports utilizados en JupyterLab funcionarán de la misma manera.
-
-## Google Colab
-
-El proyecto también puede utilizarse en Google Colab. Una vez publicado en GitHub:
-
-```python
-!git clone <URL-DE-TU-REPOSITORIO>
-%cd filtrado-digital-imagenes-python
-!pip install -e .
-```
-
-Después de la instalación, los mismos imports utilizados en JupyterLab y VS Code estarán disponibles en Colab.
-
-## Alcance actual
-
-Esta primera parte se centra en **procesamiento de imágenes en el dominio espacial**.
-
-Incluye fundamentos de representación, intensidad, contraste, convolución, suavizado, detección de bordes, umbralización y morfología.
-
-La **Transformada de Fourier** y el **filtrado en el dominio de frecuencia** quedan fuera del alcance actual y pueden incorporarse posteriormente como una segunda parte del proyecto.
-
+También puedes utilizar tus propias imágenes para experimentar con las técnicas presentadas.
 ## Licencia
 
 El código y el material educativo del repositorio se distribuyen bajo licencia MIT.
