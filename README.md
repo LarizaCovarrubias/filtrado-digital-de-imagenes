@@ -1,10 +1,12 @@
 # Filtrado digital de imágenes
 
-Repositorio educativo en español para aprender **procesamiento y filtrado digital de imágenes** desde un nivel introductorio.
+Repositorio educativo para aprender **procesamiento y filtrado digital de imágenes** desde un nivel introductorio.
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 El recorrido combina explicaciones intuitivas, implementaciones paso a paso y comparaciones con herramientas de uso común como **NumPy** y **OpenCV**. La intención no es únicamente aprender a utilizar funciones, sino comprender qué ocurre con los píxeles, cómo funciona cada técnica y en qué situaciones puede ser útil.
-
-![Fotografía principal del repositorio](images/samples/imagen_principal.jpg)
 
 ## ¿A quién está dirigido?
 
@@ -21,7 +23,7 @@ No se requiere experiencia previa en procesamiento digital de imágenes. Sin emb
 
 Los conceptos específicos de imágenes, matrices, histogramas, filtros y segmentación se introducen progresivamente a lo largo de los notebooks.
 
-## Objetivo
+## 🎯 Objetivo
 
 Desarrollar una comprensión introductoria del procesamiento digital de imágenes mediante Python, combinando fundamentos conceptuales, implementaciones paso a paso y herramientas como NumPy y OpenCV.
 
@@ -40,12 +42,12 @@ Desarrollar una comprensión introductoria del procesamiento digital de imágene
 - procesar y limpiar imágenes binarias mediante operaciones morfológicas;
 - seleccionar técnicas básicas de procesamiento de imágenes de acuerdo con el problema y analizar sus resultados.
 
-## Ruta de aprendizaje
+## 🧭 Ruta de aprendizaje
 
 Se recomienda seguir los módulos en orden, ya que algunos conceptos se reutilizan posteriormente.
 
 | Módulo | Tema | Notebook |
-| --- | --- | --- |
+| :---: | --- | --- |
 | 01 | Imágenes como matrices | [`01_imagenes_como_matrices.ipynb`](notebooks/01_imagenes_como_matrices.ipynb) |
 | 02 | Operaciones básicas y *slicing* | [`02_operaciones_basicas.ipynb`](notebooks/02_operaciones_basicas.ipynb) |
 | 03 | Histogramas y transformaciones de intensidad | [`03_histogramas_y_transformaciones.ipynb`](notebooks/03_histogramas_y_transformaciones.ipynb) |
@@ -58,39 +60,15 @@ Se recomienda seguir los módulos en orden, ya que algunos conceptos se reutiliz
 
 ## ¿Cómo utilizar este repositorio?
 
-El recorrido está pensado para combinar aprendizaje guiado, práctica e interpretación.
+El recorrido combina aprendizaje guiado, práctica e interpretación.
 
-### 1. Estudia el notebook
+| Etapa | Qué hacer | Propósito |
+| --- | --- | --- |
+| **1. Estudia el notebook** | Revisa las explicaciones, ejemplos e implementaciones paso a paso del módulo. | Comprender, visualizar y comparar los conceptos. |
+| **2. Realiza el ejercicio** | Resuelve la actividad correspondiente en `exercises/`. | Practicar la implementación, aplicación y análisis. |
+| **3. Consulta la solución** | Revisa `solucion.ipynb` después de intentar el ejercicio. | Comparar tu propuesta con una solución explicada y reproducible. |
 
-Los notebooks contienen las explicaciones, ejemplos y experimentos de cada módulo.
-
-Cuando el tema lo permite, se sigue esta secuencia:
-
-```text
-comprender → implementar → visualizar → comparar → interpretar
-```
-
-Las implementaciones manuales priorizan la **claridad educativa** sobre la velocidad de ejecución.
-
-### 2. Realiza el ejercicio
-
-Cada módulo cuenta con una actividad práctica independiente dentro de `exercises/`.
-
-Los ejercicios pueden centrarse en **implementación**, **aplicación y análisis**, o en una combinación de estos enfoques.
-
-En general, buscan desarrollar tres habilidades:
-
-```text
-programar → visualizar → interpretar
-```
-
-### 3. Consulta la solución
-
-Después de intentar el ejercicio, puedes revisar `solucion.ipynb`.
-
-Las soluciones están en formato notebook para incluir código, imágenes, histogramas, comparaciones y explicaciones. Cada solución es independiente y puede ejecutarse con `Run All` una vez instalado el proyecto.
-
-## Instalación y ejecución
+## 🚀 Instalación y ejecución
 
 El proyecto puede utilizarse en **JupyterLab**, **VS Code** o **Google Colab**.
 
@@ -120,9 +98,11 @@ pip install -e .
 jupyter lab
 ```
 
+> `pip install -e .` instala el proyecto en modo editable, permitiendo importar las funciones de `src/filtrado_digital/` desde los notebooks.
+
 ### VS Code con Conda
 
-Activa o crea el entorno Conda e instala el proyecto:
+Activa el entorno Conda e instala el proyecto:
 
 ```bash
 conda activate filtrado-digital
@@ -153,30 +133,31 @@ Puedes clonar el repositorio e instalarlo directamente en la sesión:
 
 Después de la instalación, los mismos imports utilizados en JupyterLab y VS Code estarán disponibles en Colab.
 
-## Estructura del repositorio
+## 📁 Estructura del repositorio
 
 ```text
 filtrado-digital-imagenes/
 ├── notebooks/             # Lecciones principales
 ├── exercises/             # Ejercicios y soluciones
 ├── src/
-│   └── filtrado_digital/  # Código reutilizable utilizadas por los notebooks
-├── images/                # Imágenes de ejemplo y licencias
-├── tests/                 # Pruebas automáticas, forma parte de la validación y mantenimiento del proyecto
-├── environment.yml        # Entorno recomendado para Conda
-├── pyproject.toml         # Configuración y dependencias del proyecto
+│   └── filtrado_digital/  # Funciones reutilizables
+├── images/                # Imágenes y licencias
+├── tests/                 # Pruebas automáticas
+├── environment.yml        # Entorno Conda
+├── pyproject.toml         # Configuración del proyecto
 ├── .gitignore
 ├── LICENSE
 └── README.md
 ```
 
-## Imágenes
+## 🖼️ Imágenes
 
 El repositorio incluye una fotografía real y algunas imágenes sintéticas utilizadas en los ejemplos.
 
 La procedencia y las condiciones de uso de estos recursos están documentadas en [`images/README.md`](images/README.md).
 
 También puedes utilizar tus propias imágenes para experimentar con las técnicas presentadas.
+
 ## Licencia
 
 El código y el material educativo del repositorio se distribuyen bajo licencia MIT.
