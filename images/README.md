@@ -1,6 +1,6 @@
 # Imágenes del repositorio
 
-Este repositorio combina una **fotografía real con licencia clara** y algunas imágenes sintéticas generadas por el propio código.
+Este repositorio utiliza una **fotografía real con licencia abierta** y algunas imágenes sintéticas generadas para apoyar la explicación de distintos conceptos.
 
 ## Fotografía principal
 
@@ -9,22 +9,19 @@ Archivo: `samples/imagen_principal.jpg`
 - **Título original:** *Landscape of Nature*
 - **Autor:** Yasir 48
 - **Fuente:** Wikimedia Commons
-- **Licencia:** CC0 1.0 Universal (dedicación al dominio público)
-- **Página de origen:** https://commons.wikimedia.org/wiki/File:Landscape_of_Nature.jpg
-- **Versión incluida:** derivado de 1280 px servido por Wikimedia Commons, renombrado como `imagen_principal.jpg`.
+- **Licencia:** CC0 1.0 Universal
+- **Página de origen:** [Landscape of Nature — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Landscape_of_Nature.jpg)
+- **Versión incluida:** derivada de la versión de 1280 px disponible en Wikimedia Commons y renombrada como `imagen_principal.jpg`.
 
-CC0 permite copiar, modificar y redistribuir la obra, incluso con fines comerciales, sin solicitar permiso. Aunque la atribución no es obligatoria bajo CC0, se conserva aquí para documentar el origen del recurso.
+La licencia CC0 permite copiar, modificar y redistribuir la obra sin solicitar permiso. Aunque la atribución no es obligatoria, se conserva la información de autoría y procedencia para documentar el origen del recurso.
 
 ## Imágenes sintéticas
 
-`rampa.png` y `circulo.png` se generan con funciones de `src/filtrado_digital/sinteticas.py` y se usan cuando una figura controlada ayuda a explicar un concepto.
-
-Puedes regenerarlas con:
-
-```bash
-python scripts/generate_sample_images.py
-```
+`rampa.png` y `circulo.png` se generan mediante funciones de `src/filtrado_digital/sinteticas.py` y se utilizan cuando una imagen controlada facilita la explicación de un concepto.
 
 ## Imágenes personales
 
-Si deseas experimentar con fotografías propias, puedes crear `images/personal/`. Esa carpeta está ignorada por Git para evitar subir archivos personales accidentalmente.
+Si deseas experimentar con fotografías propias, puedes crear la carpeta:
+
+```text
+images/personal/
