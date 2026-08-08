@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "filtrado-digital-imagenes"
+version = "0.5.0"
+description = "Repositorio educativo en español para aprender procesamiento y filtrado digital de imágenes con Python."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "matplotlib>=3.7",
+  "opencv-python-headless>=4.8",
+  "Pillow>=10.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,11 @@
+name: filtrado-digital
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+  - jupyterlab>=4.0
+  - ipykernel>=6.0
+  - pytest>=7.0
+  - pip
