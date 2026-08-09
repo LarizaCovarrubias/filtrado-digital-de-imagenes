@@ -1,12 +1,26 @@
-# Filtrado digital de imágenes
+<div align="center">
 
-Repositorio educativo para aprender **procesamiento y filtrado digital de imágenes** desde un nivel introductorio.
+<h1>Filtrado digital de imágenes</h1>
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
-![License](https://img.shields.io/badge/License-MIT-green)
+<p>
+Repositorio educativo para aprender <strong>procesamiento y filtrado digital de imágenes</strong> desde un nivel introductorio.
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/Python-3.10%2B-blue" alt="Python">
+  <img src="https://img.shields.io/badge/Jupyter-Notebook-orange" alt="Jupyter">
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
+</p>
+
+</div>
 
 El recorrido combina explicaciones intuitivas, implementaciones paso a paso y comparaciones con herramientas de uso común como **NumPy** y **OpenCV**. La intención no es únicamente aprender a utilizar funciones, sino comprender qué ocurre con los píxeles, cómo funciona cada técnica y en qué situaciones puede ser útil.
+
+<p align="center">
+  <img src="images/resumen_procesamiento.jpeg"
+       alt="Resumen visual de técnicas de procesamiento digital de imágenes"
+       width="900">
+</p>
 
 ## ¿A quién está dirigido?
 
