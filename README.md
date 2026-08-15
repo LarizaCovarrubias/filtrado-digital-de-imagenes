@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>Filtrado digital de imágenes</h1>
+<h1>Procesamiento Digital de Imágenes</h1>
 
 <p>
 Repositorio educativo para aprender <strong>procesamiento y filtrado digital de imágenes</strong> desde un nivel introductorio.
